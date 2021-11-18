@@ -1,0 +1,57 @@
+{
+  "name": "khl-websocket-fsm",
+  "version": "1.0.0",
+  "description": "A websocket implementation of websocket client for Kaiheila",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "compile": "rm -rf dist && tsc",
+    "format": "prettier --write .",
+    "lint": "eslint --fix --config .eslintrc.json --ignore-path .eslintignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raycursive/khl-websocket-fsm.git"
+  },
+  "author": "Ray Zhang <m@raycursive.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raycursive/khl-websocket-fsm/issues"
+  },
+  "homepage": "https://github.com/raycursive/khl-websocket-fsm#readme",
+  "dependencies": {
+    "@libre/atom": "^1.3.3",
+    "kaiheila-bot-root": "^0.2.9",
+    "unionize": "^3.1.0",
+    "ws": "^8.2.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "prettier-plugin-organize-imports": "^2.3.3",
+    "pretty-quick": "^3.1.1",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+    "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --config .prettierrc.json --ignore-path .prettierignore",
+      "eslint --fix --config .eslintrc.json --ignore-path .eslintignore"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+.*
+dist/
+Dockerfile
+Jenkinsfile
+package-lock.json
+build.groovy
+apidoc/
